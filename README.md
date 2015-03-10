@@ -1,10 +1,10 @@
 # craft-moon
 
-Crescent Moon
+    Crescent Moon
 
 #Install:
 
-$ npm install craft-moon
+    $ npm install craft-moon
 
 ##Example:
 
