@@ -1,22 +1,26 @@
 <craft>
-<parameter name="size" type="int" default="2"/>
+<parameter name="crescent" type="int" default="3"/>
+<parameter name="radius" type="int" default="5"/>
+<parameter name="height" type="int" default="0.2"/>
 <script type="text/openjscad">
-    //Main function
+   //Main function
    function main() 
-   {
-   return moon({'size':10});
+  {
+  var crescent=params.crescent;
+  var radius= params.radius;
+  var height=params.height; 
+  if(radius>=crescent)
+  {
+  var m1= cylinder({r: radius, h: height});
+  var m2= cylinder({r:crescent,h:height}).translate([0,radius,0]);
+  }
+  else
+  {
+  var m1= cylinder({r: 2, h: height});
+  var m2= cylinder({r:2,h:height}).translate([0,radius,0]);
+  }
+  return difference(m1,m2);
    }
 
- //Moon
- function moon(params)
- {
-  var size=params.size||0.1;
-  if(size<0.1)
-  size=0.1
-  var m1= cylinder({r: 2, h: 0.2});
-  var m2= cylinder({r:2,h:0.2}).translate([0,1,0]);
-
-  return difference(m1,m2);
- }
-   </script>
+ </script>
 </craft>
