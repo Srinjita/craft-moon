@@ -6,6 +6,14 @@
 
     $ npm install craft-moon
 
+#Parameters:
+
+**crescent:** To adjust radius of crescent of moon
+
+**radius:**  To adjust radius of moon
+
+** height:** To adjust height of moon
+
 ##Example:
 
     <craft>
