@@ -2,11 +2,11 @@
 
     Crescent Moon
 
-#Install:
+# Install:
 
     $ npm install craft-moon
 
-#Parameters:
+# Parameters:
 
 **crescent:** To adjust radius of crescent of moon
 
@@ -14,9 +14,10 @@
 
 **height:** To adjust height of moon
 
-##Example:
+## Example:
 
-    <craft>
+```html
+<craft>
     <craft name="moon" module="craft-moon"/>
     <lineup axis="x" spacing="1">
     <moon></moon>
@@ -24,7 +25,7 @@
     <moon crescent="2" radius="2" height="1"></moon>
     <moon crescent="2" radius="1"></ moon>
     </lineup>
-    </craft>
-
+</craft>
+```
 
 ![example](example.png)
